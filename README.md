@@ -16,7 +16,7 @@ Welcome to **Dwello**, a modern and responsive real estate landing page built us
 
 
 ## 🌐 Live Website
-[Live Preview](https://dwello-real.vercel.app)
+[Live Preview](https://dwello-realestate.vercel.app/)
 
 ## 🖼️ Screenshots
 [Hero Section](images/Dwello.png) 
