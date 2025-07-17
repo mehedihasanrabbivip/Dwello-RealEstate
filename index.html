@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwello - Real Estate</title>
+    <link rel="stylesheet" href="dist/styles.css">
+    <!-- Font Awesome CDN (Put in <head>) -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="bg-[#fdf9f6]  text-gray-900 dark:bg-gray-900 dark:text-white transition duration-300">
+
+<!-- Navbar section start -->
+    <header class="flex justify-between items-center sticky top-0 z-50 py-4 px-10 sm:px-10 md:px-16 lg:px-20 shadow-md bg-[#fdf9f6] dark:bg-gray-900 transition duration-500">
+      
+      <!-- Logo -->
+      <div class="text-2xl font-extrabold tracking-tight text-[#2f1d15] dark:text-white">
+        <span class="text-3xl font-black">D</span>wello
+      </div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center space-x-8 font-semibold">
+        <a href="#home" class="hover:text-[#5c3d2e] dark:hover:text-gray-300 transition transform hover:scale-110 hover:underline underline-offset-4">Home</a>
+        <a href="#services" class="hover:text-[#5c3d2e] dark:hover:text-gray-300 transition transform hover:scale-110 hover:underline underline-offset-4">Services</a>
+        <a href="#benefits" class="hover:text-[#5c3d2e] dark:hover:text-gray-300 transition transform hover:scale-110 hover:underline underline-offset-4">Benefits</a>
+        <a href="#contact" class="hover:text-[#5c3d2e] dark:hover:text-gray-300 transition transform hover:scale-110 hover:underline underline-offset-4">Contact</a>
+      </nav>
+
+      <!-- Right Side -->
+      <div class="hidden md:flex items-center space-x-4">
+        <!-- Dark Mode Toggle -->
+        <button id="dark-toggle" class="text-2xl transition-transform hover:scale-125">
+          <i id="dark-icon" class="fas fa-moon"></i>
+        </button>
+
+        <!-- Sign Up -->
+        <button class="bg-[#22c55e] text-white px-5 py-2 rounded-full shadow-md hover:scale-110 hover:bg-[#16a34a] transition-all duration-300">
+          Sign up
+        </button>
+      </div>
+
+      <!-- Mobile: Toggle Icons -->
+      <div class="md:hidden flex items-center gap-3">
+        <button id="dark-toggle-mobile" class="text-2xl transition-transform hover:scale-125">
+          <i id="dark-icon-mobile" class="fas fa-moon"></i>
+        </button>
+        <button id="menu-toggle" class="text-2xl focus:outline-none transition-transform hover:scale-125">
+          <i id="menu-icon" class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden fixed top-16 left-0 w-full bg-[#fdf9f6] dark:bg-gray-900 z-40 hidden flex-col space-y-4 text-center font-semibold py-6 px-4 shadow-md transition-all duration-300 fade-in">
+      <a href="#home" class="block hover:text-[#5c3d2e] dark:hover:text-gray-300 transition transform hover:scale-110">Home</a>
+      <a href="#services" class="block hover:text-[#5c3d2e] dark:hover:text-gray-300 transition transform hover:scale-110">Services</a>
+      <a href="#benefits" class="block hover:text-[#5c3d2e] dark:hover:text-gray-300 transition transform hover:scale-110">Benefits</a>
+      <a href="#contact" class="block hover:text-[#5c3d2e] dark:hover:text-gray-300 transition transform hover:scale-110">Contact</a>
+      <button class="bg-[#22c55e] text-white px-5 py-2 rounded-full shadow-md hover:scale-110 hover:bg-[#16a34a] transition-all duration-300">
+        Sign up
+      </button>
+    </div>
+<!-- Navbar section end -->
+
+<!--  Hero Section Start -->
+<section id="home" class="animate-fade-in-down bg-[#fdf9f6] dark:bg-gray-900 transition-all scroll-mt-20 py-10 sm:py-10 md:py-10 lg:py-10 xl:py-10 px-10 sm:px-10 md:px-16 lg:px-20">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+
+    <!--  Left Content -->
+    <div class="space-y-6">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-[#2f1d15] dark:text-white leading-tight">
+        Find Your <br />
+        <span class="text-[#2f1d15] dark:text-white">Dream Home</span>
+      </h1>
+      <p class="text-gray-700 dark:text-gray-300 text-lg max-w-md">
+        Explore our curated selection of exquisite properties meticulously tailored to your unique dream home vision.
+      </p>
+      <button class="bg-[#22c55e] text-white px-6 py-3 rounded-md hover:bg-[#16a34a] transition-all duration-300 shadow-md hover:scale-105">
+        Sign up
+      </button>
+    </div>
+
+    <!-- Right Floating Image -->
+    <div class="w-full animate-float">
+      <img src="images/hero-image-1.png" alt="Dream House"
+        class="rounded-xl w-full hover:scale-105 transition-transform duration-500" />
+    </div>
+  </div>
+
+  <!-- Filter Bar -->
+  <div class="mt-2 bg-[#f0ece9] dark:bg-gray-900 rounded-2xl shadow-lg p-4 flex flex-col md:flex-row items-center justify-between gap-4 animate-fade-in-up transition-all">
+
+    <!-- Location -->
+    <div
+      class="flex items-center gap-2  dark:bg-white px-4 py-2 rounded-md w-full md:w-auto hover:scale-105 transition-transform">
+      <img src="images/location.png" alt="Location Icon" class="w-5 h-5" />
+      <span class="text-sm text-black">Location</span>
+    </div>
+
+    <!-- Type -->
+    <div
+      class="flex items-center gap-2 dark:bg-white px-4 py-2 rounded-md w-full md:w-auto hover:scale-105 transition-transform">
+      <img src="images/home.png" alt="Type Icon" class="w-5 h-5" />
+      <span class="text-sm text-black">Type</span>
+    </div>
+
+    <!-- Price Range -->
+    <div
+      class="flex items-center gap-2 dark:bg-white px-4 py-2 rounded-md w-full md:w-auto hover:scale-105 transition-transform">
+      <img src="images/price.png" alt="Price Icon" class="w-5 h-5" />
+      <span class="text-sm text-black">Price Range</span>
+    </div>
+
+    <!-- Sign up -->
+    <button
+      class="bg-[#22c55e] text-white px-6 py-2 rounded-md hover:bg-[#16a34a] hover:scale-105 transition duration-300 shadow">
+      Sign up
+    </button>
+  </div>
+</section>
+<!--  Hero Section End -->
+
+<!-- Info Section Start -->
+<section id="services" class="bg-[#fdf9f6] dark:bg-gray-900 scroll-mt-20 py-10 sm:py-16 md:py-28 lg:py-28 xl:py-28 px-10 sm:px-10 md:px-16 lg:px-20">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-28">
+
+    <!-- Left Floating Image -->
+    <div class="w-full lg:w-1/2 animate-float">
+      <img src="images/house-2.png" alt="Luxury House"
+        class="rounded-xl w-full h-auto object-cover hover:scale-105 transition-transform duration-500" />
+    </div>
+
+    <!-- Right Content -->
+    <div class="w-full lg:w-1/2 space-y-6 animate-fade-in-up text-center lg:text-left">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2f1d15] dark:text-white leading-snug">
+        We Help You To Find <br />
+        Your Dream Home
+      </h2>
+      <p class="text-gray-700 dark:text-gray-300 max-w-md mx-auto lg:mx-0 text-base sm:text-lg">
+        From cozy cottages to luxurious estates, our dedicated team guides you through every step of the journey,
+        ensuring your dream home becomes a reality.
+      </p>
+
+      <!-- Stats -->
+      <div class="flex flex-row sm:flex-row justify-center lg:justify-start items-center gap-2 pt-4">
+        <div class="min-w-[100px] animate-slide-down text-center">
+          <h3 class="text-2xl md:text-3xl font-bold text-[#2f1d15] dark:text-white">8K+</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Houses Available</p>
+        </div>
+
+        <div class="min-w-[100px] animate-slide-down delay-150 text-center">
+          <h3 class="text-2xl md:text-3xl font-bold text-[#2f1d15] dark:text-white">6K+</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Houses Sold</p>
+        </div>
+
+        <div class="min-w-[100px] animate-slide-down delay-300 text-center">
+          <h3 class="text-2xl md:text-3xl font-bold text-[#2f1d15] dark:text-white">2K+</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Trusted Agents</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Info Section End -->
+
+<!--  Why Choose Us Section Start -->
+<section id="benefits" class="bg-[#fdf9f6] dark:bg-gray-900 scroll-mt-20 py-10 sm:py-16 md:py-28 lg:py-28 xl:py-28 px-10 sm:px-10 md:px-16 lg:px-20">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-[#2f1d15] dark:text-white mb-4">Why Choose Us</h2>
+    <p class="text-sm md:text-base text-gray-600 dark:text-gray-200 mt-2">
+      Elevating Your Home Buying Experience with Expertise, Integrity,<br />
+      and Unmatched Personalized Service
+    </p>
+  </div>
+
+  <!-- Feature Cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    
+    <!--  Expert Guidance -->
+    <div class="bg-white rounded-xl p-6 shadow-md text-center animate-slide-left transform transition duration-200 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
+      <img src="images/map-pin.png" alt="Guidance" class="w-10 h-10 mx-auto mb-4" />
+      <h3 class="font-semibold text-lg text-[#2f1d15] dark:text-black mb-2">Expert Guidance</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-800">
+        Benefit from our team’s seasoned expertise for a smooth buying experience
+      </p>
+    </div>
+
+    <!-- Personalized Service -->
+    <div class="bg-white rounded-xl p-6 shadow-md text-center animate-slide-left delay-100 transform transition duration-200 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
+      <img src="images/service.png" alt="Service" class="w-10 h-10 mx-auto mb-4" />
+      <h3 class="font-semibold text-lg text-[#2f1d15] dark:text-black mb-2">Personalized Service</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-800">
+        Our services adapt to your unique needs, making your journey stress-free
+      </p>
+    </div>
+
+    <!-- Transparent Process -->
+    <div class="bg-white rounded-xl p-6 shadow-md text-center animate-slide-left delay-200 transform transition duration-200 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
+      <img src="images/document.png" alt="Process" class="w-10 h-10 mx-auto mb-4" />
+      <h3 class="font-semibold text-lg text-[#2f1d15] dark:text-black mb-2">Transparent Process</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-800">
+        Stay informed with our clear and honest approach to buying your home
+      </p>
+    </div>
+
+    <!-- Exceptional Support -->
+    <div class="bg-white rounded-xl p-6 shadow-md text-center animate-slide-left delay-300 transform transition duration-200 hover:scale-105 hover:shadow-lg hover:-translate-y-1">
+      <img src="images/handshake.png" alt="Support" class="w-10 h-10 mx-auto mb-4" />
+      <h3 class="font-semibold text-lg text-[#2f1d15] dark:text-black mb-2">Exceptional Support</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-800">
+        Providing peace of mind with our responsive and attentive customer service
+      </p>
+    </div>
+
+  </div>
+</section>
+<!--  Why Choose Us Section End -->
+
+<!-- Popular Residences Section Start -->
+<section class="bg-[#fdf9f6] dark:bg-gray-900 text-center scroll-mt-28 py-10 sm:py-16 md:py-28 lg:py-28 xl:py-28 px-10 sm:px-10 md:px-16 lg:px-20">
+  <h2 class="text-3xl md:text-4xl font-extrabold text-[#2f1d15] dark:text-white mb-10">
+    Our Popular Residences
+  </h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Reusable Card -->
+    <div class="bg-white rounded-2xl overflow-hidden shadow-lg animate-slide-up hover:scale-105 transition-transform duration-300">
+      <img src="images/house-3.png" alt="House 1" class="w-full h-72 object-cover" />
+      <div class="p-5 text-left space-y-3">
+        <h3 class="text-base font-semibold text-[#2f1d15] flex items-center gap-2">
+          <img src="images/map-pin.png" class="w-4 h-4" alt="Location" /> San Francisco, California
+        </h3>
+        <div class="flex justify-between text-sm text-gray-600">
+          <div class="flex items-center gap-1">
+            <img src="images/bed.png" class="w-4 h-4" alt="Rooms" /> 4 Rooms
+          </div>
+          <div class="flex items-center gap-1">
+            <img src="images/size.png" class="w-4 h-4" alt="Size" /> 3,500 sq ft
+          </div>
+        </div>
+        <div class="flex justify-between items-center pt-3">
+          <button class="bg-[#22c55e] text-white text-sm px-4 py-1 rounded hover:bg-[#16a34a] transition-all duration-300">
+            Sign up
+          </button>
+          <span class="font-semibold text-[#2f1d15]">$2,500,000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-2xl overflow-hidden shadow-lg animate-slide-up delay-[150ms] hover:scale-105 transition-transform duration-300">
+      <img src="images/house-4.png" alt="House 2" class="w-full h-72 object-cover" />
+      <div class="p-5 text-left space-y-3">
+        <h3 class="text-base font-semibold text-[#2f1d15] flex items-center gap-2">
+          <img src="images/map-pin.png" class="w-4 h-4" alt="Location" /> Beverly Hills, California
+        </h3>
+        <div class="flex justify-between text-sm text-gray-600">
+          <div class="flex items-center gap-1">
+            <img src="images/bed.png" class="w-4 h-4" alt="Rooms" /> 3 Rooms
+          </div>
+          <div class="flex items-center gap-1">
+            <img src="images/size.png" class="w-4 h-4" alt="Size" /> 1,500 sq ft
+          </div>
+        </div>
+        <div class="flex justify-between items-center pt-3">
+          <button class="bg-[#22c55e] text-white text-sm px-4 py-1 rounded hover:bg-[#16a34a] transition-all duration-300">
+            Sign up
+          </button>
+          <span class="font-semibold text-[#2f1d15]">$850,000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-2xl overflow-hidden shadow-lg animate-slide-up delay-[300ms] hover:scale-105 transition-transform duration-300">
+      <img src="images/house-5.png" alt="House 3" class="w-full h-72 object-cover" />
+      <div class="p-5 text-left space-y-3">
+        <h3 class="text-base font-semibold text-[#2f1d15] flex items-center gap-2">
+          <img src="images/map-pin.png" class="w-4 h-4" alt="Location" /> Palo Alto, California
+        </h3>
+        <div class="flex justify-between text-sm text-gray-600">
+          <div class="flex items-center gap-1">
+            <img src="images/bed.png" class="w-4 h-4" alt="Rooms" /> 6 Rooms
+          </div>
+          <div class="flex items-center gap-1">
+            <img src="images/size.png" class="w-4 h-4" alt="Size" /> 4,000 sq ft
+          </div>
+        </div>
+        <div class="flex justify-between items-center pt-3">
+          <button class="bg-[#22c55e] text-white text-sm px-4 py-1 rounded hover:bg-[#16a34a] transition-all duration-300">
+            Sign up
+          </button>
+          <span class="font-semibold text-[#2f1d15]">$3,700,000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Popular Residences Section End -->
+
+<!--  Testimonial Section Start -->
+<section class="bg-[#fdf9f6] dark:bg-gray-900 scroll-mt-28 py-10 sm:py-16 md:py-28 lg:py-28 xl:py-28 px-10 sm:px-10 md:px-16 lg:px-20">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-[#2f1d15] dark:text-white">What People Say About Dwello</h2>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-slide-up">
+    
+    <!--  Testimonial 1 -->
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500">
+      <img src="images/testimonial-1.png" alt="Sarah Nguyen" class="w-full h-48 object-cover" />
+      <div class="p-6">
+        <div class="flex items-center mb-4">
+          <img src="images/sarah.png" alt="Sarah" class="w-10 h-10 rounded-full mr-3 object-cover" />
+          <div>
+            <h3 class="font-bold text-[#2f1d15]">Sarah Nguyen</h3>
+            <p class="text-sm text-gray-500">San Francisco</p>
+          </div>
+          <span class="ml-auto text-yellow-500 font-bold text-sm">⭐ 5.0</span>
+        </div>
+        <p class="text-sm text-gray-600">Dwello truly cares about their clients. They helped me find the perfect home in the Bay Area. Their professionalism is unmatched.</p>
+      </div>
+    </div>
+
+    <!--  Testimonial 2 -->
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500 delay-100">
+      <img src="images/testimonial-2.png" alt="Michael" class="w-full h-48 object-cover" />
+      <div class="p-6">
+        <div class="flex items-center mb-4">
+          <img src="images/michael.png" alt="Michael" class="w-10 h-10 rounded-full mr-3 object-cover" />
+          <div>
+            <h3 class="font-bold text-[#2f1d15]">Michael Rodriguez</h3>
+            <p class="text-sm text-gray-500">San Diego</p>
+          </div>
+          <span class="ml-auto text-yellow-500 font-bold text-sm">⭐ 4.5</span>
+        </div>
+        <p class="text-sm text-gray-600">Their expertise and service exceeded my expectations. I found my dream home quickly and smoothly. Highly recommend!</p>
+      </div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-500 delay-200">
+      <img src="images/testimonial-3.png" alt="Emily Johnson" class="w-full h-48 object-cover" />
+      <div class="p-6">
+        <div class="flex items-center mb-4">
+          <img src="images/emily.png" alt="Emily" class="w-10 h-10 rounded-full mr-3 object-cover" />
+          <div>
+            <h3 class="font-bold text-[#2f1d15]">Emily Johnson</h3>
+            <p class="text-sm text-gray-500">Los Angeles</p>
+          </div>
+          <span class="ml-auto text-yellow-500 font-bold text-sm">⭐ 5.0</span>
+        </div>
+        <p class="text-sm text-gray-600">Dwello made my home dream a reality! Their team was supportive every step of the process. Couldn't be happier!</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--  TestimonialSection End -->
+
+<!-- Help & Subscribe Section Start -->
+<section id="contact" class="bg-[#fdf9f6] dark:bg-gray-900 dark:text-white text-center animate-slide-left scroll-mt-20 py-10 sm:py-16 md:py-28 lg:py-28 xl:py-28 px-10 sm:px-10 md:px-16 lg:px-20  ">
+  <h2 class="text-2xl md:text-3xl font-extrabold text-[#2f1d15] dark:text-white mb-4">
+    Do You Have Any Questions?<br />
+    Get Help From Us
+  </h2>
+
+  <!-- Help Options -->
+  <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mt-6 mb-8 text-sm text-gray-700">
+    <div class="flex items-center gap-2">
+      <img src="images/verified.png" alt="Chat" class="w-4 h-4 dark:bg-gray-200 dark:rounded-full" />
+      <span class="dark:text-white">Chat live with our support team</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <img src="images/verified.png" alt="FAQ" class="w-4 h-4 dark:bg-gray-200 dark:rounded-full" />
+      <span class="dark:text-white">Browse our FAQ</span>
+    </div>
+  </div>
+
+  <!-- Subscribe Form -->
+  <form class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-xl mx-auto">
+    <div class="flex items-center bg-[#f0ece9] px-4 py-2 rounded-md w-full sm:w-auto text-black">
+      <img src="images/email.png" alt="Email" class="w-4 h-4 mr-2" />
+      <input
+        type="email"
+        placeholder="Enter your email address..."
+        class="bg-transparent outline-none text-sm w-72 placeholder:text-gray-700"
+      />
+    </div>
+    <button type="submit" class="bg-[#22c55e] text-white px-6 py-2 rounded-md hover:bg-[#16a34a] transition-all duration-300">
+      Submit
+    </button>
+  </form>
+</section>
+<!-- Help & Subscribe Section End -->
+
+<!-- Footer Start -->
+<footer class="bg-[#f0ece9] dark:bg-gray-800 text-[#2f1d15] dark:text-white py-16 px-10 sm:px-10 md:px-16 lg:px-20 animate-slide-in-left">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-sm text-center md:text-left">
+    
+    <!-- Logo + Description -->
+    <div>
+      <h1 class="text-2xl font-extrabold mb-4">
+        <span class="text-3xl">D</span>wello
+      </h1>
+      <p class="max-w-xs text-[14px] mx-auto md:mx-0">
+        Bringing you closer to your dream home, one click at a time.
+      </p>
+    </div>
+
+    <!--  About -->
+    <div>
+      <h4 class="font-semibold mb-4 text-[#22c55e]">About</h4>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline hover:text-[#22c55e] transition">Our Story</a></li>
+        <li><a href="#" class="hover:underline hover:text-[#22c55e] transition">Careers</a></li>
+        <li><a href="#" class="hover:underline hover:text-[#22c55e] transition">Our Team</a></li>
+        <li><a href="#" class="hover:underline hover:text-[#22c55e] transition">Resources</a></li>
+      </ul>
+    </div>
+
+    <!-- Support -->
+    <div>
+      <h4 class="font-semibold mb-4 text-[#22c55e]">Support</h4>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline hover:text-[#22c55e] transition">FAQ</a></li>
+        <li><a href="#" class="hover:underline hover:text-[#22c55e] transition">Contact Us</a></li>
+        <li><a href="#" class="hover:underline hover:text-[#22c55e] transition">Help Center</a></li>
+        <li><a href="#" class="hover:underline hover:text-[#22c55e] transition">Terms of Service</a></li>
+      </ul>
+    </div>
+
+    <!--  Find Us -->
+    <div>
+      <h4 class="font-semibold mb-4 text-[#22c55e]">Find Us</h4>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:underline hover:text-[#22c55e] transition">Events</a></li>
+        <li><a href="#" class="hover:underline hover:text-[#22c55e] transition">Locations</a></li>
+        <li><a href="#" class="hover:underline hover:text-[#22c55e] transition">Newsletter</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div>
+      <h4 class="font-semibold mb-4 text-[#22c55e]">Our Social</h4>
+      <ul class="space-y-3">
+        <li class="flex items-center justify-center md:justify-start gap-2 hover:text-[#22c55e] transition">
+          <i class="fab fa-instagram"></i> Instagram
+        </li>
+        <li class="flex items-center justify-center md:justify-start gap-2 hover:text-[#22c55e] transition">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </li>
+        <li class="flex items-center justify-center md:justify-start gap-2 hover:text-[#22c55e] transition">
+          <i class="fab fa-x-twitter"></i> Twitter (X)
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+<!-- Footer End -->
+
+ <!-- js link add -->
+ <script src="scripts.js"></script>
+   
+</body>
+</html>
